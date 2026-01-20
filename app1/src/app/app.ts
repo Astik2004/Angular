@@ -2,10 +2,12 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Demo } from './demo/demo';
 import { Pngif } from './pngif/pngif';
+import { Pngfor } from './pngfor/pngfor';
+import { Pngfor1 } from './pngfor1/pngfor1';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Demo, Pngif],
+  imports: [RouterOutlet, Demo, Pngif, Pngfor, Pngfor1],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

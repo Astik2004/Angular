@@ -1,0 +1,15 @@
+<p>pngfor1 works!</p>
+<div>
+    <table border="1">
+        <tr>
+            <th>EmpId</th>
+            <th>EmpName</th>
+            <th>EmpSalary</th>
+        </tr>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.empId}}</td>
+            <td>{{emp.empName}}</td>
+            <td>{{emp.empSalary}}</td>
+        </tr>
+    </table>
+</div>
