@@ -1,0 +1,34 @@
+<h1>Template Driven Form</h1>
+
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+  <!-- NAME -->
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" ngModel #name="ngModel" required />
+  <span *ngIf="name.invalid && name.touched" style="color: red"> Name is required </span>
+  <br /><br />
+
+  <!-- EMAIL -->
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" ngModel #email="ngModel" required email />
+  <span *ngIf="email.invalid && email.touched" style="color: red">
+    <span *ngIf="email.errors?.['required']">Email is required</span>
+    <span *ngIf="email.errors?.['email']">Invalid email format</span>
+  </span>
+  <br /><br />
+
+  <!-- GENDER -->
+  <label for="gender">Gender:</label>
+  <select id="gender" name="gender" ngModel #gender="ngModel" required>
+    <option value="">Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <span *ngIf="gender.invalid && gender.touched" style="color: red"> Gender is required </span>
+  <br /><br />
+
+  <button type="submit" [disabled]="myform.invalid">Submit</button>
+</form>
+
+<hr />
+<p>Form Value 👇</p>
+<pre>{{ myform.value.name }}</pre>
