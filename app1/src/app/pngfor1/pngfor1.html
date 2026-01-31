@@ -1,15 +1,37 @@
-<p>pngfor1 works!</p>
-<div>
-    <table border="1">
-        <tr>
-            <th>EmpId</th>
-            <th>EmpName</th>
-            <th>EmpSalary</th>
-        </tr>
-        <tr *ngFor="let emp of employees">
-            <td>{{emp.empId}}</td>
-            <td>{{emp.empName}}</td>
-            <td>{{emp.empSalary}}</td>
-        </tr>
-    </table>
-</div>
+<h2>Employee CRUD</h2>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>EmpId</th>
+    <th>Name</th>
+    <th>Salary</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let emp of employees; let i = index">
+    <td>{{ emp.empId }}</td>
+    <td>{{ emp.empName }}</td>
+    <td>{{ emp.empSalary }}</td>
+    <td>
+      <button (click)="onEdit(i)">Edit</button>
+      <button (click)="onDelete(i)">Delete</button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <input type="number" [(ngModel)]="newEmp.empId" placeholder="Emp Id">
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="newEmp.empName" placeholder="Name">
+    </td>
+    <td>
+      <input type="number" [(ngModel)]="newEmp.empSalary" placeholder="Salary">
+    </td>
+    <td>
+      <button (click)="onSave()">
+        {{ editIndex === null ? 'Insert' : 'Update' }}
+      </button>
+    </td>
+  </tr>
+</table>

@@ -7,7 +7,7 @@ import { Pngfor1 } from './pngfor1/pngfor1';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Demo, Pngif, Pngfor, Pngfor1],
+  imports: [ Pngfor1],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
