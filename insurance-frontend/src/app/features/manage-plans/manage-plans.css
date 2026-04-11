@@ -1,0 +1,22 @@
+/* --- manage-plans.css --- */
+.card {
+    max-width: 900px;
+    margin: 0 auto; /* Center the form if the screen is very wide */
+    border-radius: 8px;
+}
+
+.form-label {
+    color: #495057;
+    margin-bottom: 0.4rem;
+}
+
+/* Custom focus ring for inputs */
+.form-control:focus, .form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+/* Make required asterisk slightly softer */
+.text-danger {
+    opacity: 0.8;
+}

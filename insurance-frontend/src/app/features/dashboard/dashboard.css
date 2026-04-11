@@ -1,0 +1,50 @@
+/* --- dashboard.css --- */
+
+/* Make the table header sticky so it stays visible when scrolling down lots of records */
+.table-responsive {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa; /* Matches Bootstrap's table-light */
+    z-index: 1;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Add a subtle hover effect to table rows for better UX */
+tbody tr {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9 !important;
+    transform: scale(1.002);
+}
+
+/* Style the badges to look more modern and pill-shaped */
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border-radius: 50rem; /* Makes them perfectly round on the edges */
+}
+
+/* Form styling tweaks */
+.form-label {
+    margin-bottom: 0.2rem;
+    color: #495057;
+}
+
+.form-select, .form-control {
+    border-color: #ced4da;
+    box-shadow: none;
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}

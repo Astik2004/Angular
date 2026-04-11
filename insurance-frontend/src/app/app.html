@@ -1,0 +1,42 @@
+<div class="d-flex" style="height: 100vh; background-color: #f8f9fa;">
+      
+  <nav class="bg-dark text-white p-3 shadow" style="width: 250px;">
+    <h4 class="mb-4 text-center border-bottom pb-3 mt-2"><i class="bi bi-shield-check text-primary"></i> Insurance Pro</h4>
+    
+    <ul class="nav flex-column gap-2">
+      <li class="nav-item">
+        <a routerLink="/dashboard" routerLinkActive="bg-primary rounded" class="nav-link text-white p-2">
+           📊 Dashboard
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/manage-plans" routerLinkActive="bg-primary rounded" class="nav-link text-white p-2">
+           ➕ Manage Plans
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/analytics" routerLinkActive="bg-primary rounded" class="nav-link text-white p-2">
+           📈 Analytics
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/audit-logs" routerLinkActive="bg-primary rounded" class="nav-link text-white p-2">
+           📝 Audit Logs
+        </a>
+      </li>
+      </ul>
+  </nav>
+
+  <main class="flex-grow-1 p-4" style="overflow-y: auto;">
+    
+    <header class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom bg-white p-3 rounded shadow-sm">
+       <h3 class="m-0 text-dark">Welcome, Admin</h3>
+       <span class="text-muted fw-bold">{{ today | date:'longDate' }}</span>
+    </header>
+
+    <router-outlet></router-outlet>
+    
+  </main>
+
+</div>
